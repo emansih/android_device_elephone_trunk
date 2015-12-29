@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
-# Copyright (c) 2015, mdeejay (mdjrussia@gmail.com)
+# Copyright (c) 2015 mdeejay (mdjrussia@gmail.com)
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -62,10 +62,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8916 \
     libmm-qcamera
-
-#Snap. Camera
-PRODUCT_PACKAGES += \
-    SnapdragonCamera
 
 # Display
 PRODUCT_PACKAGES += \
