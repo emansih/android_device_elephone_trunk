@@ -106,8 +106,6 @@ on boot
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
 on init
-    # BoringSSL
-    export LD_PRELOAD "libboringssl-compat.so"
 
 on property:service.bootanim.exit=1
     # Enable zram

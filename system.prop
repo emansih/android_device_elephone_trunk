@@ -17,6 +17,7 @@ ro.telephony.ril.config=simactivation
 ro.ril.multi_rat_capable=true
 persist.data.qmi.adb_logmask=0
 persist.data.target=dpm1
+ro.telephony.default_3g2g=0
 
 #Enable B service adj transition by default
 ro.sys.fw.bservice_enable=true
@@ -28,6 +29,7 @@ ro.product.model.platform=1
 
 # disable all camera debug
 persist.camera.hal.debug.mask=0
+camera2.portability.force_api=1
 
 # use threads max for dex2oat
 dalvik.vm.dex2oat-threads=4
@@ -38,6 +40,3 @@ ro.fusion.magfield.max=250
 
 # Factory reset protection
 ro.frp.pst=/dev/block/bootdevice/by-name/config
-
-# HW keys
-qemu.hw.mainkeys=1

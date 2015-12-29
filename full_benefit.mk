@@ -21,10 +21,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from benefit device
 $(call inherit-product, device/ark/benefit/device.mk)
 
+# Locales
+PRODUCT_LOCALES := en_US ru_RU uk_UA
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := benefit
 PRODUCT_NAME := full_benefit
 PRODUCT_BRAND := ARK
 PRODUCT_MODEL := Benefit A3
 PRODUCT_MANUFACTURER := ark
+
 

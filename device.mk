@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Screen density
-PRODUCT_AAPT_CONFIG := normal xhdpi
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
@@ -55,14 +55,13 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/gt9xx.kl:system/usr/keylayout/gt9xx.kl
 
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
-    libmm-qcamera \
-    libboringssl-compat
+    libmm-qcamera
 
 #Snap. Camera
 PRODUCT_PACKAGES += \
@@ -114,10 +113,6 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libtinyxml \
     libxml2
-
-# Dalvik/HWUI
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapminfree=2m
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

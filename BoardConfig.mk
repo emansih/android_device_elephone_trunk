@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
-# Copyright (c) 2015, mdeejay (mdjrussia@gmail.com)
+# Copyright (c) 2015 mdeejay (mdjrussia@gmail.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,14 +31,18 @@ TARGET_CPU_CORTEX_A53 := true
 BOARD_USES_SECURE_SERVICES := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-TARGET_KERNEL_SOURCE := kernel/ark
+TARGET_KERNEL_SOURCE := kernel/msm-3.10
+ifneq ($(FORCE_32_BIT),true)
 TARGET_KERNEL_CONFIG := cyanogenmod_ark-64_defconfig
+else
+TARGET_KERNEL_CONFIG := cyanogenmod_ark_defconfig
+endif
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -54,9 +58,6 @@ TARGET_USES_AOSP := true
 
 # Disable Jack & Jill compilation
 ANDROID_COMPILE_WITH_JACK := false
-
-# Disable ashmem size tracking
-COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
@@ -74,10 +75,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 335544320
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 5939100672
 
