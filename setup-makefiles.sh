@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=benefit
-VENDOR=ark
+DEVICE=trunk
+VENDOR=elephone
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
@@ -172,7 +172,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),benefit)
+ifeq (\$(TARGET_DEVICE),trunk)
 ifeq (\$(QCPATH),)
 
 include \$(CLEAR_VARS)
@@ -447,3 +447,4 @@ endif
 endif
 
 EOF
+

@@ -12,21 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/ark/benefit/full_benefit.mk)
+$(call inherit-product, device/elephone/trunk/full_trunk.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_benefit
-BOARD_VENDOR := ark
-PRODUCT_DEVICE := benefit
+PRODUCT_NAME := cm_trunk
+BOARD_VENDOR := elephone
+PRODUCT_DEVICE := trunk
 
-PRODUCT_GMS_CLIENTID_BASE := android-ark
+PRODUCT_GMS_CLIENTID_BASE := android-trunk
 
-PRODUCT_MANUFACTURER := ark
-PRODUCT_MODEL := Benefit A3
+PRODUCT_MANUFACTURER := elephone
+PRODUCT_MODEL := Elephone Trunk
 
-PRODUCT_BRAND := ARK
-TARGET_VENDOR := ark
-TARGET_VENDOR_PRODUCT_NAME := benefit
-TARGET_VENDOR_DEVICE_NAME := benefit
+PRODUCT_BRAND := trunk
+TARGET_VENDOR := elephone
+TARGET_VENDOR_PRODUCT_NAME := trunk
+TARGET_VENDOR_DEVICE_NAME := trunk

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=benefit
-export VENDOR=ark
+export DEVICE=trunk
+export VENDOR=elephone
 
 if [ $# -eq 0 ]; then
   SRC=adb

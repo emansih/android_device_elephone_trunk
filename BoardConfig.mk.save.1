@@ -38,18 +38,11 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-#TARGET_KERNEL_SOURCE := kernel/msm-3.10
-#ifneq ($(FORCE_32_BIT),true)
-#TARGET_KERNEL_CONFIG := cyanogenmod_trunk_defconfig
-#else
-#TARGET_KERNEL_CONFIG := cyanogenmod_trunk_defconfig
-#endif
-
-# Try to build the kernel
 TARGET_KERNEL_SOURCE := kernel/elephone/trunk
-TARGET_KERNEL_CONFIG := cyanogenmod_trunk_defconfig
-
-# Bluetooth 
+ifneq ($(FORCE_32_BIT),true)
+#TARGET_PREBUILT_KERNEL := kernel/elephone/trunk
+TARGET_KERNEL_CONFIG := cy
+# Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera

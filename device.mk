@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/ark/benefit/benefit-vendor.mk)
+$(call inherit-product-if-exists, vendor/elephone/trunk/trunk-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/benefit-releasekey
+    $(LOCAL_PATH)/trunk-releasekey
 
 # Misc dependency packages
 PRODUCT_PACKAGES += \
