@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "ARK Benefit A3"
+#define BTM_DEF_LOCAL_NAME   "Elephone Trunk"
 #define BLUETOOTH_QTI_SW TRUE
 #define MAX_ACL_CONNECTIONS    7
 #define MAX_L2CAP_CHANNELS    16
