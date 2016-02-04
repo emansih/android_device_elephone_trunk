@@ -18,11 +18,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from benefit device
+# Inherit from Elephone Trunk device
 $(call inherit-product, device/elephone/trunk/device.mk)
 
 # Locales
-PRODUCT_LOCALES := en_US ru_RU uk_UA
+PRODUCT_LOCALES := en_US zh_CN ja_JP
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := trunk
