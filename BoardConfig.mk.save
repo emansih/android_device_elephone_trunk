@@ -23,7 +23,7 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-TARGET_USES_UNCOMPRESSED_KERNEL := false
+
 
 # Cortex arch
 TARGET_ARCH=arm64
@@ -34,7 +34,7 @@ TARGET_CPU_CORTEX_A53 := true
 BOARD_USES_SECURE_SERVICES := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -87,6 +87,21 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5939100672
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_F2FS := true
+
+# TWRP
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+BOARD_HAS_NO_REAL_SDCARD := false
+TW_NO_BATT_PERCENT := false
+TW_CUSTOM_POWER_BUTTON := 107
+TW_NO_REBOOT_BOOTLOADER := false
+TW_NO_REBOOT_RECOVERY := false
+TW_NO_USB_STORAGE := true
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+RECOVERY_TOUCHSCREEN_FLIP_X := true
+TWRP_EVENT_LOGGING := false
+PRODUCT_COPY_FILES += device/elephone/trunk/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # WiFi - EAP-SIM
 #CONFIG_EAP_PROXY := qmi
