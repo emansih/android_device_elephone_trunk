@@ -153,3 +153,9 @@ on charger
    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
    start vm_bms
 
+on property:ro.product.cpu.abi=arm64-v8a
+    setprop rild.libpath /system/vendor/lib64/libril-qc-qmi-1.so
+
+on property:ro.product.cpu.abi=armeabi-v7a
+    setprop rild.libpath /system/vendor/lib/libril-qc-qmi-1.so
+
