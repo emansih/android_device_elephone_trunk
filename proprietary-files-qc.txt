@@ -302,9 +302,9 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # WLAN
--lib/libwcnss_qmi.so
+lib/libwcnss_qmi.so
 -lib64/libwpa_qmi_eap_proxy.so
--lib64/libwcnss_qmi.so
+lib64/libwcnss_qmi.so
 
 # Time services
 app/TimeService/TimeService.apk
