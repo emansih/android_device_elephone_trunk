@@ -89,7 +89,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_F2FS := true
 
 # TWRP
-RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := false
 TW_NO_BATT_PERCENT := false
