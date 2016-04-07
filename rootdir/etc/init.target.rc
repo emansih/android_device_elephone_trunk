@@ -106,7 +106,7 @@ on boot
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
 on init
-    export LD_PRELOAD "libboringssl-compat.so"
+    export LD_SHIM_LIBS /system/vendor/lib64/egl/libEGL_adreno.so|libboringssl-compat.so:/system/vendor/lib64/egl/libGLESv1_CM_adreno.so|libboringssl-compat.so:/system/vendor/lib64/egl/libGLESv2_adreno.so|libboringssl-compat.so:/system/vendor/lib/egl/libEGL_adreno.so|libboringssl-compat.so:/system/vendor/lib/egl/libGLESv1_CM_adreno.so|libboringssl-compat.so:/system/vendor/lib/egl/libGLESv2_adreno.so|libboringssl-compat.so
 
 on property:service.bootanim.exit=1
     # Enable zram
