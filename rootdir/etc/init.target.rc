@@ -159,3 +159,18 @@ on property:ro.product.cpu.abi=arm64-v8a
 on property:ro.product.cpu.abi=armeabi-v7a
     setprop rild.libpath /system/vendor/lib/libril-qc-qmi-1.so
 
+service sensord /system/bin/sensord
+    class main
+    user root
+
+on property:init.svc.zygote=restarting
+    restart sensord
+
+service calibacc /system/bin/accelcal
+    class main
+    oneshot
+    disabled
+
+on property:sys.sensors.acc=*
+    start calibacc
+

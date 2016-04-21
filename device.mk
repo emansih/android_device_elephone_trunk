@@ -84,7 +84,10 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.msm8916
+     accelcal \
+     AccCalibration \
+     sensord \
+     sensors.msm8916
 
 # Media
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
