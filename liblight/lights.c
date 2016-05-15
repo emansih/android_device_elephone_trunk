@@ -41,6 +41,7 @@ static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 
 static struct light_state_t g_notification;
+static struct light_state_t g_buttons;
 
 const char *const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
@@ -118,6 +119,25 @@ set_light_backlight(UNUSED struct light_device_t *dev,
 }
 
 static int
+set_light_buttons(UNUSED struct light_device_t *dev,
+        const struct light_state_t *state)
+{
+    int err = 0;
+    int brightness = rgb_to_brightness(state);
+    pthread_mutex_lock(&g_lock);
+    g_buttons = *state;
+    g_buttons.color = brightness ? 0x00ffffff : 0;
+    if (brightness == 0 && rgb_to_brightness(&g_notification) > 0) {
+        brightness = rgb_to_brightness(&g_notification);
+    }
+    err = write_int(BUTTONS_FILE, brightness);
+    pthread_mutex_unlock(&g_lock);
+
+    return err;
+}
+
+
+static int
 set_light_notifications(UNUSED struct light_device_t *dev,
         const struct light_state_t *state)
 {
@@ -126,7 +146,9 @@ set_light_notifications(UNUSED struct light_device_t *dev,
     pthread_mutex_lock(&g_lock);
     g_notification = *state;
     g_notification.color = brightness ? 0x00ffffff : 0;
-    err = write_int(BUTTONS_FILE, brightness);
+    if (rgb_to_brightness(&g_buttons) == 0) {
+        err = write_int(BUTTONS_FILE, brightness);
+    }
     pthread_mutex_unlock(&g_lock);
 
     return 0;
@@ -157,6 +179,8 @@ static int open_lights(const struct hw_module_t *module, const char *name,
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
+    else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
+        set_light = set_light_buttons;
     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
         set_light = set_light_notifications;
     else
