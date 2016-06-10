@@ -26,7 +26,7 @@
     <integer name="config_outdoorAmbientLux">12000</integer>
 
     <!-- Default wi-fi hotspot ssid -->
-    <string name="config_wifiHotSpotSsid" translatable="false">Benefit A3</string>
+    <string name="config_wifiHotSpotSsid" translatable="false">Trunk</string>
     <!-- Default wi-fi direct name -->
-    <string name="config_wifiDirectName" translatable="false">Benefit A3</string>
+    <string name="config_wifiDirectName" translatable="false">Trunk</string>
 </resources>
