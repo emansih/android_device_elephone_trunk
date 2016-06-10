@@ -21,6 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from Elephone Trunk device
 $(call inherit-product, device/elephone/trunk/device.mk)
 
+TARGET_BOARD_PLATFORM_VARIANT := msm8916
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := trunk
 PRODUCT_NAME := full_trunk
