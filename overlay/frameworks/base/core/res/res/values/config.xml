@@ -29,12 +29,12 @@
 
     <integer-array name="config_autoBrightnessLevels">
         <item>10</item>
-        <item>30</item>
-        <item>60</item>
+        <item>50</item>
         <item>100</item>
-        <item>150</item>
-        <item>210</item>
-        <item>255</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2500</item>
     </integer-array>
 
     <integer-array name="config_autoBrightnessLcdBacklightValues">
