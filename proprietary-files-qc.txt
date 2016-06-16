@@ -60,12 +60,8 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libactuator_dw9714.so
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libactuator_dw9714_camera.so
-vendor/lib/libchromatix_gc2355_back_common.so
-vendor/lib/libchromatix_gc2355_back_preview.so
 vendor/lib/libchromatix_gc2355_front_1lane_common.so
 vendor/lib/libchromatix_gc2355_front_1lane_preview.so
-vendor/lib/libchromatix_gc2355_front_common.so
-vendor/lib/libchromatix_gc2355_front_preview.so
 vendor/lib/libchromatix_s5k4h5_8916_back_common.so
 vendor/lib/libchromatix_s5k4h5_8916_back_default_video.so
 vendor/lib/libchromatix_s5k4h5_8916_back_hfr_120fps.so
@@ -75,20 +71,8 @@ vendor/lib/libchromatix_s5k4h5_8916_back_liveshot.so
 vendor/lib/libchromatix_s5k4h5_8916_back_preview.so
 vendor/lib/libchromatix_s5k4h5_8916_back_snapshot.so
 vendor/lib/libchromatix_s5k4h5_8916_back_video_hd.so
-vendor/lib/libchromatix_s5k4h5_8916_common.so
-vendor/lib/libchromatix_s5k4h5_8916_default_video.so
-vendor/lib/libchromatix_s5k4h5_8916_hfr_120fps.so
-vendor/lib/libchromatix_s5k4h5_8916_hfr_60fps.so
-vendor/lib/libchromatix_s5k4h5_8916_hfr_90fps.so
-vendor/lib/libchromatix_s5k4h5_8916_liveshot.so
-vendor/lib/libchromatix_s5k4h5_8916_preview.so
-vendor/lib/libchromatix_s5k4h5_8916_snapshot.so
-vendor/lib/libchromatix_s5k4h5_8916_video_hd.so
-vendor/lib/libmmcamera_gc2355_back.so
 vendor/lib/libmmcamera_gc2355_front_1lane.so
-vendor/lib/libmmcamera_gc2355_front.so
 vendor/lib/libmmcamera_s5k4h5_8916_back.so
-vendor/lib/libmmcamera_s5k4h5_8916.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
