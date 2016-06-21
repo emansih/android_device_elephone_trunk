@@ -9,6 +9,7 @@ LOCAL_CFLAGS += -D__SENSORS_DEVICE_API_VERSION_1_1__=110
 LOCAL_CFLAGS += -D__SENSORS_DEVICE_API_VERSION_1_3__=130
 
 $(warning ----android_version is $(android_version))
+$(warning sensors: $(bma) $(bmm) $(bmg) $(bmc) $(bmi))
 
 ifeq (2.3, $(android_version))
 LOCAL_CFLAGS += -D__HAL_VER__=__SENSORS_DEVICE_API_VERSION_0_1__
@@ -193,7 +194,7 @@ LOCAL_CFLAGS += -DHW_INFO_BITWIDTH_A=14
 else ifeq ($(bma), bma222e)
 LOCAL_CFLAGS += -D__BMA222E__
 acc_name = bma222e
-lOCAL_CFLAGS += -DHW_INFO_BITWIDTH_A=8
+LOCAL_CFLAGS += -DHW_INFO_BITWIDTH_A=8
 endif
 
 # bmm150

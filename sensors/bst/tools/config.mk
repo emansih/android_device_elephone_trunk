@@ -11,10 +11,10 @@ android_version ?= 5.0
 # bma255
 # bma280
 # bma222
-bma ?=
+bma = bma222e
 
 # bmm150
-bmm ?= bmm150
+bmm ?= 
 
 # bmg160
 bmg ?=
@@ -26,10 +26,10 @@ bmc ?=
 
 # bmi055 contains bma255+bmg160
 # bmi058 contains bma280+bmg160
-bmi ?= bmi055
+bmi ?= 
 
 # ndof, m4g, compass, imu, accel_only
-usecase ?= ndof
+usecase ?= accel_only
 
 #======================================
 # sensor feature configurations
@@ -43,7 +43,7 @@ uncalibrated_virtual_sensor_support ?= true
 significant_motion_sensor_support ?= true
 
 # double tap sensor support:: true or false
-double_tap_sensor_support ?= true
+double_tap_sensor_support ?= false
 
 # support bmp sensor in HAL : true or false
 bmp_support ?= false
@@ -55,7 +55,7 @@ flip_gesture_support ?= true
 softiron_support ?= true
 
 # fast magnetic calibration :off on
-fast_fmc ?= on
+fast_fmc ?= off
 
 # fastest mode configuration
 # 100Hz or 200Hz
