@@ -11,7 +11,7 @@ android_version ?= 5.0
 # bma255
 # bma280
 # bma222
-bma = bma222e
+bma = bma255
 
 # bmm150
 bmm ?= 
