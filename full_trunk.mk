@@ -30,4 +30,4 @@ PRODUCT_BRAND := Elephone
 PRODUCT_MODEL := Elephone trunk
 PRODUCT_MANUFACTURER := elephone
 
-
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/elephone/trunk/releasekey
