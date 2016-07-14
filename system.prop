@@ -5,7 +5,7 @@ persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=false
 
 # Display
-ro.sf.lcd_density=320
+ro.sf.lcd_density=300
 
 # Radio
 ro.telephony.default_network=9,9
